@@ -33,6 +33,7 @@ export class AppComponent {
     height: 'auto',
     manualColumnMove: true,
     persistentState: true,
+    manualColumnResize: true,
     rowHeaders: true,
     licenseKey: 'non-commercial-and-evaluation'
   };
