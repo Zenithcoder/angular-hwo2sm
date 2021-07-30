@@ -5,24 +5,49 @@ import { HotTableRegisterer } from '@handsontable/angular';
 @Component({
   selector: 'my-app',
   template: `
-  <div class="hot">
-    <hot-table [hotId]="id" [settings]="hotSettings"></hot-table>
-  </div>
-  <br>
-  <button (click)="alertData()">Alert data</button>
+    <hot-table
+      [data]="dataset"
+      [colHeaders]="true"
+      [rowHeaders]="true"
+      [settings]="hotSettings"
+      [hotId]="id"
+      licenseKey="non-commercial-and-evaluation"
+    >
+      <hot-column data="id" [readOnly]="true" title="ID"></hot-column>
+      <hot-column data="name" title="Full name"></hot-column>
+      <hot-column data="address" title="Street name"></hot-column>
+    </hot-table>
+    <br>
+     
   `,
-  styleUrls: [ './app.component.css' ]
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent  {
+export class AppComponent {
   private hotRegisterer = new HotTableRegisterer();
-  id = 'hotInstance';
   hotSettings: Handsontable.GridSettings = {
-    data: Handsontable.helper.createSpreadsheetData(6, 6),
-    colHeaders: true
+    startRows: 5,
+    startCols: 5,
+    width: '100%',
+    colHeaders: true,
+    stretchH: 'all',
+    height: 'auto',
+    manualColumnMove: true,
+    persistentState: true,
+    rowHeaders: true,
+    licenseKey: 'non-commercial-and-evaluation'
   };
+  id = 'my-custom-id';
 
-  alertData() {
-    let myData = this.hotRegisterer.getInstance(this.id).getData();
-    alert(myData)
-  }
+  dataset: any[] = [
+    { id: 1, name: 'Ted Right', address: 'Wall Street' },
+    { id: 2, name: 'Frank Honest', address: 'Pennsylvania Avenue' },
+    { id: 3, name: 'Joan Well', address: 'Broadway' },
+    { id: 4, name: 'Gail Polite', address: 'Bourbon Street' },
+    { id: 5, name: 'Michael Fair', address: 'Lombard Street' },
+    { id: 6, name: 'Mia Fair', address: 'Rodeo Drive' },
+    { id: 7, name: 'Cora Fair', address: 'Sunset Boulevard' },
+    { id: 8, name: 'Jack Right', address: 'Michigan Avenue' }
+  ];
+
+
 }
