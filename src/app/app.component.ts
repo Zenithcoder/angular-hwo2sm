@@ -13,9 +13,9 @@ import { HotTableRegisterer } from '@handsontable/angular';
       [hotId]="id"
       licenseKey="non-commercial-and-evaluation"
     >
-      <hot-column data="id" [readOnly]="true" title="ID"></hot-column>
-      <hot-column data="name" title="Full name"></hot-column>
-      <hot-column data="address" title="Street name"></hot-column>
+      <hot-column data="id" [readOnly]="true" title="id"></hot-column>
+      <hot-column data="name" title="Movie title"></hot-column>
+      <hot-column data="address" title="Description"></hot-column>
     </hot-table>
     <br>
      
@@ -46,7 +46,23 @@ export class AppComponent {
     { id: 5, name: 'Michael Fair', address: 'Lombard Street' },
     { id: 6, name: 'Mia Fair', address: 'Rodeo Drive' },
     { id: 7, name: 'Cora Fair', address: 'Sunset Boulevard' },
-    { id: 8, name: 'Jack Right', address: 'Michigan Avenue' }
+    { id: 8, name: 'Jack Right', address: 'Michigan Avenue' },
+    { id: 9, name: 'Ted Right', address: 'Wall Street' },
+    { id: 10, name: 'Frank Honest', address: 'Pennsylvania Avenue' },
+    { id: 11, name: 'Joan Well', address: 'Broadway' },
+    { id: 12, name: 'Gail Polite', address: 'Bourbon Street' },
+    { id: 13, name: 'Michael Fair', address: 'Lombard Street' },
+    { id: 14, name: 'Mia Fair', address: 'Rodeo Drive' },
+    { id: 15, name: 'Cora Fair', address: 'Sunset Boulevard' },
+    { id: 16, name: 'Jack Right', address: 'Michigan Avenue' },
+    { id: 17, name: 'Ted Right', address: 'Wall Street' },
+    { id: 18, name: 'Frank Honest', address: 'Pennsylvania Avenue' },
+    { id: 19, name: 'Joan Well', address: 'Broadway' },
+    { id: 20, name: 'Gail Polite', address: 'Bourbon Street' },
+    { id: 21, name: 'Michael Fair', address: 'Lombard Street' },
+    { id: 22, name: 'Mia Fair', address: 'Rodeo Drive' },
+    { id: 23, name: 'Cora Fair', address: 'Sunset Boulevard' },
+    { id: 24, name: 'Jack Right', address: 'Michigan Avenue' }
   ];
 
 
